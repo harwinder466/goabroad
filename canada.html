@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study in Canada | GoAbroad</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #F4F4F9;
+      color: #0D3B66;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0D3B66;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 6px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover,
+    header nav a.active {
+      color: #F95738;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 35px;
+      background: #F4F4F9;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #0D3B66;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 850px;
+      margin: 0 auto 18px auto;
+    }
+
+    .content {
+      padding: 35px 20px 50px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      color: #0D3B66;
+      font-size: 1.55rem;
+      margin: 35px 0 15px;
+      border-left: 4px solid #F95738;
+      padding-left: 10px;
+    }
+
+    .content h3 {
+      color: #0D3B66;
+      font-size: 1.15rem;
+      margin: 20px 0 8px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .content ul {
+      list-style-type: disc;
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    .clickable-img {
+      width: 100%;
+      max-width: 850px;
+      display: block;
+      margin: 30px auto 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .clickable-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.92rem;
+      margin-bottom: 25px;
+      color: #244c73;
+    }
+
+    .note-box {
+      background: white;
+      border-left: 4px solid #F95738;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      margin: 25px 0;
+    }
+
+    .quick-list {
+      background: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      margin: 20px 0;
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #lightbox img {
+      max-width: 92%;
+      max-height: 90%;
+      border-radius: 12px;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.85);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      background: #0D3B66;
+      color: white;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 14px 18px;
+      }
+
+      header nav {
+        margin-top: 12px;
+      }
+
+      header nav a {
+        display: inline-block;
+        margin: 6px 8px 0 0;
+      }
+
+      .hero {
+        padding: 42px 16px 25px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .content {
+        padding: 25px 16px 40px;
+      }
+
+      .content h2 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo 2.jpeg" alt="GoAbroad Logo" />
+      <h1>GoAbroad</h1>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="FAQ.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="canada.html" class="active">Canada</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Study in Canada</h1>
+    <p>Canada is one of the most attractive study destinations for international students because it combines high-quality education, multicultural communities, safe cities, practical career pathways, and beautiful natural surroundings. Students who choose Canada can experience modern campuses, respected universities, flexible programs, and a welcoming environment for learning and personal growth.</p>
+
+    <img src="images/file_000000002008720ba210fd70459fe132.png" alt="Canada city skyline with flag" class="clickable-img" loading="lazy">
+    <p class="caption"><em>Canada offers world-class cities, respected institutions, and a welcoming environment for international students.</em></p>
+  </section>
+
+  <section class="content">
+    <h2>Why Study in Canada?</h2>
+    <p>Canada has become one of the top choices for students who want an international education with strong academic value and practical career benefits. The country is known for its respected universities, advanced colleges, research-focused institutions, and programs that are designed to match modern industry needs. Whether a student wants to study engineering, business, health sciences, computer science, hospitality, media, environmental studies, or social sciences, Canada offers a wide range of options at different academic levels.</p>
+
+    <p>One of the main reasons students prefer Canada is the balance between quality and affordability. Tuition fees are often competitive compared with some other major study destinations, and many institutions provide scholarships, bursaries, assistantships, and financial support for eligible students. Living costs vary from city to city, but students can plan their budget by choosing shared accommodation, using public transport, cooking at home, and using student discounts.</p>
+
+    <p>Canada is also famous for its multicultural society. International students can meet people from many countries and backgrounds, which helps them build communication skills, cultural understanding, and global confidence. This is especially useful for students who want to build a career in international companies or industries where teamwork and communication are important.</p>
+
+    <p>The education system in Canada focuses on both theory and practical learning. Many programs include internships, co-op options, lab work, case studies, field projects, and industry-based assignments. This approach helps students understand real-world situations instead of learning only from books. Practical learning can also improve employability because students gain experience before completing their studies.</p>
+
+    <img src="images/file_00000000428471f8b5ad51d85fdd7166.png" alt="International students in Canada" class="clickable-img" loading="lazy">
+    <p class="caption"><em>International students in Canada enjoy a multicultural campus experience and practical learning environment.</em></p>
+
+    <h2>Education System in Canada</h2>
+    <p>Canada has universities, colleges, institutes, and technical schools. Universities usually focus on academic degrees, research, and advanced study, while colleges are often known for practical, career-based programs. Students can choose undergraduate degrees, postgraduate certificates, diplomas, master’s degrees, doctoral programs, and professional courses depending on their background and goals.</p>
+
+    <p>A major advantage of Canada’s education system is flexibility. Many colleges and universities offer programs with different intakes, course lengths, and specializations. Students can begin with a diploma or certificate and later continue toward a degree. Some students prefer college programs because they are more career-oriented and may include co-op placements. Others choose universities for research, academic depth, and global recognition.</p>
+
+    <p>Canadian institutions also place strong importance on academic integrity, student support, and skill development. Many campuses provide writing centres, career services, counselling, international student offices, library resources, technology labs, and workshops. These services help students adjust to a new academic system and improve their chances of success.</p>
+
+    <h2>Top Universities and Colleges in Canada</h2>
+    <p>Canada has many respected institutions that attract students from around the world. Some popular universities include the University of Toronto, University of British Columbia, McGill University, University of Alberta, University of Waterloo, McMaster University, University of Calgary, University of Ottawa, and Western University. These institutions are known for strong academic programs, research, innovation, and international student support.</p>
+
+    <p>Canada is also home to many well-known colleges and polytechnic institutions. These institutions often provide practical training in fields such as business, healthcare support, information technology, hospitality, skilled trades, design, media, aviation, and engineering technology. College programs can be a good choice for students who want career-focused learning and shorter program durations.</p>
+
+    <p>Before choosing an institution, students should compare the course structure, tuition fees, location, admission requirements, scholarship options, campus facilities, student support services, and career outcomes. A student should not choose only by name; the best institution is the one that matches the student’s budget, academic background, and long-term career plan.</p>
+
+    <h2>Popular Courses in Canada</h2>
+    <p>Canada offers thousands of programs for international students. Some of the most popular fields include Computer Science, Data Science, Artificial Intelligence, Cybersecurity, Software Engineering, Business Administration, Accounting, Finance, Marketing, Supply Chain Management, Project Management, Healthcare, Nursing, Biotechnology, Public Health, Engineering, Hospitality, Tourism, Environmental Science, Psychology, Education, and Media Studies.</p>
+
+    <p>Technology-related programs are very popular because Canada has growing technology sectors in cities such as Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and Edmonton. Students interested in programming, cloud computing, app development, networking, data analytics, or cybersecurity can find many course options.</p>
+
+    <p>Business and management courses are also in demand because they prepare students for careers in companies, startups, banks, consulting firms, marketing agencies, and international trade. Students who want leadership roles may choose business administration, human resource management, finance, entrepreneurship, or project management.</p>
+
+    <h2>Tuition Fees and Study Costs</h2>
+    <p>Tuition fees in Canada depend on the institution, program, city, and level of study. University degrees usually cost more than many college diplomas, while specialized programs such as medicine, dentistry, law, engineering, and MBA programs can be more expensive. Students should always check the official institution website before applying because fees can change every year.</p>
+
+    <p>In addition to tuition, students must plan for living expenses. These may include accommodation, food, transportation, books, phone bills, internet, health insurance, winter clothing, and personal expenses. Larger cities such as Toronto and Vancouver may have higher rent, while smaller cities can be more affordable. A careful budget helps students avoid financial stress after arrival.</p>
+
+    <div class="note-box">
+      <p><strong>Important:</strong> Students should always verify tuition fees, admission rules, visa requirements, and work rules from official university and government sources before making final decisions.</p>
+    </div>
+
+    <h2>Scholarships and Financial Aid</h2>
+    <p>Many Canadian universities and colleges provide scholarships for international students. Scholarships may be based on academic performance, leadership, community involvement, sports achievements, financial need, or program-specific requirements. Some scholarships are automatically considered during admission, while others require a separate application.</p>
+
+    <p>Popular funding options may include entrance scholarships, merit-based awards, graduate assistantships, research assistantships, teaching assistantships, and institution-specific bursaries. Graduate students may have more opportunities for assistantships, especially in research-based master’s and doctoral programs.</p>
+
+    <p>To improve scholarship chances, students should prepare strong academic records, a clear statement of purpose, recommendation letters, a good resume, and proof of achievements. Applying early is important because scholarship deadlines may be different from admission deadlines.</p>
+
+    <img src="images/file_000000006e147208a6056ca0d5a474d1.png" alt="Graduation in Canada" class="clickable-img" loading="lazy">
+    <p class="caption"><em>Graduating from a Canadian institution can support future academic and career opportunities.</em></p>
+
+    <h2>Student Visa and Study Permit</h2>
+    <p>International students usually need a study permit to study in Canada. Before applying, a student normally needs an acceptance letter from a designated learning institution. Students may also need to show proof of funds, identity documents, academic records, and other supporting documents based on their situation.</p>
+
+    <p>The visa process should be handled carefully. Students must provide truthful information, clear documents, and a genuine study plan. A strong application usually explains why the student selected Canada, why the chosen program is suitable, how the student will manage expenses, and how the course connects with future goals.</p>
+
+    <p>Visa and immigration rules can change, so students should not depend only on old information from social media or random websites. Always check official Canadian government sources and the official website of the chosen institution for updated requirements.</p>
+
+    <h2>Part-Time Work and Career Opportunities</h2>
+    <p>Many international students want to work while studying to gain experience and manage expenses. Canada may allow eligible students to work part-time during studies and full-time during scheduled breaks, depending on current rules and the conditions of their study permit. Students should always follow official work rules and avoid unauthorized employment.</p>
+
+    <p>Part-time work can help students improve communication skills, understand Canadian workplace culture, and build confidence. Common student jobs may include roles in retail, food service, customer support, campus services, tutoring, administration, and hospitality. However, students should not depend fully on part-time work to pay all expenses because job availability can vary.</p>
+
+    <p>After graduation, eligible students may explore post-graduation work opportunities. Work experience in Canada can be valuable for building a career, learning professional skills, and understanding industry standards. Career services at colleges and universities can help with resumes, interviews, job fairs, networking, internships, and employer connections.</p>
+
+    <h2>Living in Canada</h2>
+    <p>Canada is known for clean cities, public transport, healthcare systems, libraries, parks, community centres, and safe neighbourhoods. Students can choose from on-campus housing, shared apartments, homestays, or private rentals. The best option depends on budget, location, lifestyle, and distance from campus.</p>
+
+    <p>Weather is an important part of life in Canada. Winters can be cold in many regions, so students should prepare proper clothing such as jackets, boots, gloves, and thermal wear. At the same time, Canada has beautiful seasons, natural landscapes, lakes, mountains, forests, and outdoor activities that make student life memorable.</p>
+
+    <p>Food, culture, festivals, and student communities are very diverse. Students can find many international restaurants, grocery stores, religious centres, cultural groups, and student clubs. Joining clubs and campus events can help students make friends and adjust faster.</p>
+
+    <img src="images/file_000000009c40720b8d635f39dbaf2208.png" alt="Beautiful nature of Canada" class="clickable-img" loading="lazy">
+    <p class="caption"><em>Canada is known for beautiful landscapes, safe cities, and a high quality of life.</em></p>
+
+    <h2>Admission Requirements</h2>
+    <p>Admission requirements depend on the institution and program. Common documents include academic transcripts, passport, English language test scores if required, statement of purpose, recommendation letters, resume, portfolio for creative courses, and proof of funds. Some programs may require interviews, entrance tests, or prerequisite subjects.</p>
+
+    <p>Students should start preparing early because collecting documents, taking language tests, applying for admission, arranging finances, and completing visa steps can take time. It is better to apply well before the deadline instead of waiting until the last moment.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>1. Is Canada good for international students?</h3>
+    <p>Yes. Canada is popular because of its quality education, safe environment, multicultural society, and practical career opportunities.</p>
+
+    <h3>2. Which courses are popular in Canada?</h3>
+    <p>Computer Science, Business, Data Science, Engineering, Healthcare, Hospitality, Project Management, Finance, and Environmental Science are popular choices.</p>
+
+    <h3>3. Can students work while studying in Canada?</h3>
+    <p>Eligible students may be allowed to work according to the conditions of their study permit and current government rules.</p>
+
+    <h3>4. Are scholarships available?</h3>
+    <p>Yes. Many institutions offer scholarships based on academic merit, leadership, financial need, research ability, or program-specific criteria.</p>
+
+    <h3>5. Which cities are popular for students?</h3>
+    <p>Toronto, Vancouver, Montreal, Ottawa, Calgary, Edmonton, Waterloo, and Halifax are popular student cities.</p>
+
+    <h3>6. Is Canada affordable?</h3>
+    <p>Costs depend on the city, institution, and lifestyle. Careful budgeting and early planning can make studying in Canada more manageable.</p>
+
+    <h2>Conclusion</h2>
+    <p>Canada is a strong study destination for students who want recognized education, practical skills, multicultural exposure, and career development. With the right institution, suitable program, proper budget, and careful visa preparation, students can build a valuable international education experience. Before applying, always compare official information, understand requirements clearly, and choose a path that matches your academic and professional goals.</p>
+
+    <div class="quick-list">
+      <h2>Quick Highlights</h2>
+      <ul>
+        <li>Globally recognized universities and colleges.</li>
+        <li>Career-focused programs with practical learning.</li>
+        <li>Multicultural and welcoming student environment.</li>
+        <li>Scholarship and funding options for eligible students.</li>
+        <li>Part-time work and post-study career possibilities under official rules.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+     
